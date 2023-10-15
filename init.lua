@@ -1,3 +1,3 @@
 require("krios")
-print("hello")
+print("INFO: ./init.lua loaded")
 

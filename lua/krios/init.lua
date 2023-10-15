@@ -1,4 +1,4 @@
 require("krios.lazy")
 require("krios.remap")
-print("Hello from the krios")
-
+require("krios.telescope")
+print("INFO: ./lua/krios init.lua loaded")
