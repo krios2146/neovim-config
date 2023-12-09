@@ -14,4 +14,4 @@ Telescope plugin requires manual installation of
 ```bash
     cargo install fd-find
 ```
-
+For the tree-nvim icons nerd-fonts installation is required
