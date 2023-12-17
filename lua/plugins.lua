@@ -12,8 +12,4 @@ return {
     {'hrsh7th/nvim-cmp'},
     {'L3MON4D3/LuaSnip'},
     {'wakatime/vim-wakatime'},
-    {'windwp/nvim-autopairs',
-        event = "InsertEnter",
-        opts = {} -- this is equalent to setup({}) function
-    },
 }

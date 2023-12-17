@@ -19,7 +19,7 @@ local cmp_action = lsp_zero.cmp_action()
 cmp.setup({
   mapping = cmp.mapping.preset.insert({
     -- `Enter` key to confirm completion
-    ['<CR>'] = cmp.mapping.confirm({select = false}),
+    ['<CR>'] = cmp.mapping.confirm({select = true}),
 
     -- Ctrl+Space to trigger completion menu
     ['<C-Space>'] = cmp.mapping.complete(),
