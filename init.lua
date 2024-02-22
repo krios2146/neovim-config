@@ -22,5 +22,5 @@ require("lazy").setup("plugins")
 
 require("config")
 
-vim.cmd("colorscheme kanagawa")
+vim.cmd.colorscheme("kanagawa")
 
