@@ -1,7 +1,7 @@
-return {{
-    'nvim-tree/nvim-tree.lua', 
+return { {
+    'nvim-tree/nvim-tree.lua',
     lazy = false,
-    dependencies = {"nvim-tree/nvim-web-devicons"},
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
         require("nvim-tree").setup({
             actions = {
@@ -11,4 +11,4 @@ return {{
             },
         })
     end,
-}}
+} }
