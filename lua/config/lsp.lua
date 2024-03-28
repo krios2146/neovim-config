@@ -1,6 +1,6 @@
 local lsp_zero = require('lsp-zero')
 
-lsp_zero.on_attach(function(client, bufnr)
+lsp_zero.on_attach(function(_, bufnr)
     -- see :help lsp-zero-keybindings
     -- to learn the available actions
     lsp_zero.default_keymaps({ buffer = bufnr })
@@ -13,7 +13,18 @@ require('mason-lspconfig').setup({
     }
 })
 
-require('lspconfig').gleam.setup({})
+local lspconfig = require('lspconfig')
+
+lspconfig.gleam.setup({})
+
+lspconfig.volar.setup {
+    filetypes = { 'typescript', 'javascript', 'vue' },
+    init_options = {
+        vue = {
+            hybridMode = false,
+        },
+    },
+}
 
 local cmp = require('cmp')
 local cmp_action = lsp_zero.cmp_action()
