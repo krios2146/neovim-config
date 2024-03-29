@@ -356,7 +356,6 @@ require("lazy").setup({
 
 			-- NOTE: Servers to install
 			local servers = {
-				gleam = {},
 				lua_ls = {
 					settings = {
 						Lua = {
@@ -373,6 +372,7 @@ require("lazy").setup({
 					},
 				},
 				tsserver = {},
+				tailwindcss = {},
 			}
 
 			require("mason").setup()
@@ -396,6 +396,9 @@ require("lazy").setup({
 					end,
 				},
 			})
+
+			-- NOTE: Gleam should be installed without Mason
+			require("lspconfig").gleam.setup({})
 		end,
 	},
 
