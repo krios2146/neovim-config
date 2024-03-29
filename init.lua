@@ -411,7 +411,6 @@ require("lazy").setup({
 				-- Disable `format_on_save.lsp_fallback` for languages that don't have a well standardized coding style
 				local disable_filetypes = { c = true, cpp = true }
 				return {
-					timeout_ms = 500,
 					lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
 				}
 			end,
@@ -471,7 +470,7 @@ require("lazy").setup({
 					["<C-p>"] = cmp.mapping.select_prev_item(),
 					["<C-b>"] = cmp.mapping.scroll_docs(-4),
 					["<C-f>"] = cmp.mapping.scroll_docs(4),
-					["<C-y>"] = cmp.mapping.confirm({ select = true }),
+					["<Enter>"] = cmp.mapping.confirm({ select = true }),
 					["<C-Space>"] = cmp.mapping.complete({}),
 
 					-- Think of <c-l> as moving to the right of your snippet expansion.
