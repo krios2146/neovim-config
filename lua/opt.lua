@@ -1,5 +1,10 @@
+-- Relative line setup
 vim.opt.number = true
 vim.opt.relativenumber = true
+
+-- Colors
+vim.opt.termguicolors = true
+
 -- Set folding with treesitter
 vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
