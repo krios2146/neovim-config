@@ -60,8 +60,8 @@ return {
             },
           },
           mappings = { -- Change default qflist to the Trouble
-            i = { ['<C-q>'] = open_with_trouble },
-            n = { ['<C-q>'] = open_with_trouble },
+            i = { ['<M-q>'] = open_with_trouble },
+            n = { ['<M-q>'] = open_with_trouble },
           },
         },
         pickers = {
@@ -99,7 +99,7 @@ return {
       map_search('o', builtin.oldfiles, '[O]ld Files')
       map_search('/', builtin_grep_open_files, '[/] in Open Files')
       map_search('n', builtin_config_files, '[N]eovim config')
-      map_search(' ', builtin.buffers, '[ ] Find existing buffers')
+      map_search('<BS>', builtin.buffers, 'Existing buffers')
       map_search('F', builtin.current_buffer_fuzzy_find, '[F]uzzy [F]ind Current buffer')
 
       map_git('c', builtin.git_commits, '[C]ommits')
