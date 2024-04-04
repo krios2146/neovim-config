@@ -31,4 +31,12 @@ return {
       require('mini.surround').setup() -- Adds mappings for surround text with ", (, etc.
     end,
   },
+
+  -- Fancy notifications
+  {
+    'rcarriga/nvim-notify',
+    config = function()
+      vim.notify = require 'notify'
+    end,
+  },
 }
