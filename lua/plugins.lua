@@ -39,4 +39,10 @@ return {
       vim.notify = require 'notify'
     end,
   },
+
+  -- Different UI for the `vim.ui.input`
+  {
+    'stevearc/dressing.nvim',
+    opts = {},
+  },
 }
