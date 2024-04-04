@@ -9,6 +9,7 @@ return {
           'filetype',
         },
       },
+      extensions = { 'fugitive', 'trouble', 'lazy', 'mason', 'nvim-tree' },
     },
   },
 }
