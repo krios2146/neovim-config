@@ -15,7 +15,6 @@ return {
       local cmp = require 'cmp'
       local luasnip = require 'luasnip'
       local lspkind = require 'lspkind'
-      luasnip.config.setup {}
 
       local luasnip_jump_forward = function()
         if luasnip.expand_or_locally_jumpable() then
@@ -26,6 +25,18 @@ return {
       local luasnip_jump_back = function()
         if luasnip.locally_jumpable(-1) then
           luasnip.jump(-1)
+        end
+      end
+
+      local luasnip_choice_next = function()
+        if luasnip.choice_active() then
+          luasnip.change_choice(1)
+        end
+      end
+
+      local luasnip_choice_prev = function()
+        if luasnip.choice_active() then
+          luasnip.change_choice(-1)
         end
       end
 
@@ -45,6 +56,8 @@ return {
           ['<C-Space>'] = cmp.mapping.complete {},
           ['<C-l>'] = cmp.mapping(luasnip_jump_forward, { 'i', 's' }),
           ['<C-h>'] = cmp.mapping(luasnip_jump_back, { 'i', 's' }),
+          ['<C-k>'] = cmp.mapping(luasnip_choice_next, { 'i', 's' }),
+          ['<C-j>'] = cmp.mapping(luasnip_choice_prev, { 'i', 's' }),
         },
         sources = {
           { name = 'nvim_lsp' },
@@ -52,6 +65,7 @@ return {
           { name = 'path' },
           { name = 'buffer' },
         },
+        ---@diagnostic disable-next-line: missing-fields
         formatting = {
           format = lspkind.cmp_format {
             mode = 'symbol_text',
