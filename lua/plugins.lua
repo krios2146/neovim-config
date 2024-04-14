@@ -1,19 +1,11 @@
 -- Plugins with no additional configuration goes here
 return {
+  require 'themes',
   { 'tpope/vim-sleuth' }, -- Detect `tabstop` and `shiftwidth` automatically
   { 'numToStr/Comment.nvim', opts = {} }, -- Linewise/blockwise comments
   { 'windwp/nvim-ts-autotag', opts = {} }, -- Same as `autopairs` but for HTML tags
   { 'wakatime/vim-wakatime' }, -- Wakatime - time tracker
   { 'tpope/vim-fugitive' }, -- Git integration
-
-  -- Theme installation
-  {
-    'folke/tokyonight.nvim',
-    priority = 1000,
-    init = function()
-      vim.cmd.colorscheme 'tokyonight-night'
-    end,
-  },
 
   -- Highlight todo, notes, etc. in the comments
   {

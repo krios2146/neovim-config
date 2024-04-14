@@ -14,7 +14,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
--- NOTE: Install `lazy.nvim` plugin manager
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   vim.fn.system {
@@ -26,8 +25,11 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     lazypath,
   }
 end
+---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup 'plugins'
+
+vim.cmd.colorscheme 'tokyonight-night'
 
 -- vim: ts=2 sts=2 sw=2 et
