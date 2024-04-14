@@ -24,14 +24,6 @@ return {
     end,
   },
 
-  -- Fancy notifications
-  {
-    'rcarriga/nvim-notify',
-    config = function()
-      vim.notify = require 'notify'
-    end,
-  },
-
   -- Different UI for the `vim.ui.input`
   {
     'stevearc/dressing.nvim',
