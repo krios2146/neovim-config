@@ -101,6 +101,7 @@ return {
       map_search('n', builtin_config_files, '[N]eovim config')
       map_search('<BS>', builtin.buffers, 'Existing buffers')
       map_search('F', builtin.current_buffer_fuzzy_find, '[F]uzzy [F]ind Current buffer')
+      map_search('c', builtin.colorscheme, '[C]olorschemes')
 
       map_git('c', builtin.git_commits, '[C]ommits')
       map_git('b', builtin.git_branches, '[B]ranches')
