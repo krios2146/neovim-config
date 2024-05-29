@@ -13,6 +13,7 @@ return {
           s = { '[S]earch' },
           w = { '[W]orkspace' },
           g = { '[G]it' },
+          h = { 'Git [H]unk' },
         },
       }
     end,
