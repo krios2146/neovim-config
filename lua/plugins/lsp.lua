@@ -19,6 +19,17 @@ local function get_servers()
     tsserver = {},
     tailwindcss = {},
     ltex = {},
+    basedpyright = {
+      settings = {
+        basedpyright = {
+          analysis = {
+            diagnosticSeverityOverrides = {
+              reportAny = false,
+            },
+          },
+        },
+      },
+    },
   }
 end
 
@@ -28,6 +39,8 @@ local function get_tools()
     'stylua',
     'prettier',
     'eslint_d',
+    'black',
+    'mypy',
   }
 end
 
