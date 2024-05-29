@@ -18,5 +18,7 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Center screen on up jump' })
 vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Center screen on next search result jump' })
 vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Center screen on previous search result jump' })
 
+vim.keymap.set('x', '<leader>p', '"_dP', { desc = "Paste but don't yank selected text to the register" })
+
 vim.keymap.set('n', '<leader>gi', vim.cmd.Git, { desc = '[G]it [I]ntegration' })
 vim.keymap.set('n', '<leader>st', vim.cmd.TodoTelescope, { desc = '[S]earch [T]ODOs' })
