@@ -6,6 +6,7 @@ return {
   { 'windwp/nvim-ts-autotag', opts = {} }, -- Same as `autopairs` but for HTML tags
   { 'wakatime/vim-wakatime' }, -- Wakatime - time tracker
   { 'tpope/vim-fugitive' }, -- Git integration
+  { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = { enabled = false } }, -- indentation guidelines
 
   -- Highlight todo, notes, etc. in the comments
   {
