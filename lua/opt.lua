@@ -2,6 +2,11 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+-- Set default tab to 4 for every language
+vim.o.shiftwidth = 4
+vim.o.softtabstop = 4
+vim.o.expandtab = true
+
 -- Colors
 vim.opt.termguicolors = true
 
